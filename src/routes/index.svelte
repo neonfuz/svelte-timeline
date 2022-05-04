@@ -1,2 +1,13 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<script>
+ import Timeline from '$lib/Timeline.svelte';
+ const data = [
+     { year: 2002, fact: 'foo' },
+     { year: 2010, fact: 'bar' },
+     { year: 2036, fact: 'baz' },
+ ];
+ const axes = {
+     y: 'year'
+ };
+</script>
+
+<Timeline {data} {axes} />
