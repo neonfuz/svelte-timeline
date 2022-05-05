@@ -38,9 +38,9 @@
  }
  text {
      font-size: 10px;
-     fill: #333;
+     fill: #888;
  }
  text.cursorText {
-     fill: #888;
+     fill: #ddd;
  }
 </style>
