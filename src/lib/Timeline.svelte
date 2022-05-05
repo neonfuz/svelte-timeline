@@ -4,6 +4,7 @@
  export let height = 250;
  export let data;
  export let axes;
+ export let formatY = num => Math.floor(num + 0.5);
  $: [min, max] = minmax(data.map(point => point[axes.y]));
  $: range = max - min;
  let mouseY;
@@ -21,7 +22,7 @@
             class="cursorText"
             x="{10+width/2}"
             y="{10+(width/2-10)*mouseY}"
-        >- {Math.floor(min + range * mouseY)}</text>
+        >- {formatY(min + range * mouseY)}</text>
     {/if}
     {#each data as point}
         <text
