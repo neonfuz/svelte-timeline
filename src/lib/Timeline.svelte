@@ -1,15 +1,11 @@
 <script>
+ import {minmax} from '$lib/util.js';
+ export let width = 500;
+ export let height = 250;
  export let data;
  export let axes;
- $: min = data.reduce((curr, next) => (
-     (next[axes.y] < curr) ? next[axes.y] : curr
- ), Infinity);
- $: max = data.reduce((curr, next) => (
-     (next[axes.y] > curr) ? next[axes.y] : curr
- ), -Infinity);
+ $: [min, max] = minmax(data.map(point => point[axes.y]));
  $: range = max - min;
- const width = 500;
- const height = 250;
 </script>
 
 <svg viewBox="0 0 {width} {height}">
