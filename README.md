@@ -1,3 +1,8 @@
+# svelte-timeline (WIP)
+
+This is a component to plot information on a timeline. Currently it is a heavy
+WIP and not meant for general usage.
+
 # create-svelte
 
 Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
